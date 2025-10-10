@@ -1,0 +1,128 @@
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content = "width=device-width, initial-scale=1.0">
+        <title>Louisiana Culture</title>
+        <style>
+            body{
+                font-family: "Sego UI", sans-serif;
+                background-color: #f5f3eb;
+                color:#222;
+                margin:0;
+                padding:0;
+            }
+            header{
+                background-color:#4b2e05;
+                color: white;
+                text-align: center;
+                padding: 20px 10px;
+            }
+            h1{
+                font-size: 2em;
+            }
+            main{
+                padding: 20px;
+                line-height: 1.6;
+            }
+            img{
+                width:100%;
+                max-width:500px;
+                display:block;
+                margin:10px auto;
+                border-radius: 10px;
+            }
+            a{
+                color:#8b0000;
+                text-decoration:none;
+                font-weight:bold;
+
+            }
+            a:hover{
+                text-decoration: underline;
+            }
+            .funfact{
+                background:#fff9e6;
+                padding: 15px;
+                border-left:5px solid #c68600;
+                margin-top:20px;
+            }
+            button{
+                background-color: #8b0000;
+                color:white;
+                border:none;
+                padding: 10px 20px;
+                font-size:1em;
+                border-radius:5px;
+                cursor: pointer;
+            }
+            button:hover{
+                background-color: #4b2e05;
+                color: white;
+                padding:15px;
+                margin-top:  40px;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>Louisiana Culture</h1>
+            <p>Explore the food, music, and tradition that make Louisiana unique.It's known for its rich traditions, food, music, and festivals.The state's unique blend of cultures makes it one of the most distinctive places in the US.</p>
+            <img src="https://upload.wikimedia.org/wikepedia/commons/8/82/New_Orleans_Mardi_Gras_2019_-_Krewe_of_Zulu_03.jpg" alt="Mardi Gras parade">
+        </header>
+        <main>
+            <section>
+                <h2>The Spirit of Louisiana</h2>
+                <p>
+                    Louisiana's culture is a mix of French, Africa, Spanish, and Native American influences.The spirit of Louisiana is a unique blend of vibrant multiculturalism, resilience, and a deep, infectious love for life that finds its most famous expression in the motto Laissez les bons temps rouler—"Let the good times roll". This spirit is rooted in a rich tapestry of French, Spanish, West African, and Native American cultures, which profoundly influence its famous Cajun and Creole food and music. From the bustling city streets of New Orleans to the serene bayous, the state's celebratory soul is on display during events like Mardi Gras and various blues and jazz festivals. Despite facing significant challenges, including devastating natural disasters, Louisiana's people exhibit an enduring resilience and a strong sense of community. The state's distinct and sometimes harsh geography, including its expansive swamplands, also shapes its character, fostering a deep connection to the natural environment. This combination of rich heritage, communal celebration, steadfast resilience, and natural beauty is what defines the unmistakable spirit of Louisiana. 
+                </p>
+            </section>
+            <section>
+                <h2>Food & Cuisine</h2>
+                <p>
+                    Louisiana's food culture is a vibrant, flavorful reflection of its rich history, dominated by two celebrated cuisines: Creole, the more cosmopolitan "city food" of New Orleans, and Cajun, the rustic "country food" of the Acadians who settled in the bayous. Both are a fusion of West African, French, Spanish, and Native American traditions, built upon a foundation of onions, celery, and bell peppers known as the "holy trinity". 
+Key differences define them: Creole cuisine often features tomatoes and richer ingredients like cream and butter, while traditional Cajun dishes are typically tomato-free, relying instead on a roux base for stews. Seafood is central to both, with iconic dishes including the thick stew gumbo, the rice-based jambalaya, and the smothered shellfish dish étouffée. Beyond these, Louisiana offers a wide array of iconic foods, from savory boudin sausage and po'boy sandwiches to sweet, powdered-sugar-covered beignets. 
+                </p>
+                <p>
+                    Try learning more bout these dishes on <a href="https://www.louisianatravel.com/culinary" target="_blank">Louisiana Travel's Food Page</a>
+                </p>
+            </section>
+            <section>
+             <h2>Music and Tradition</h2>
+             <p>Louisiana's musical and traditional landscape is a vibrant and unique reflection of its multicultural heritage, particularly its French, Spanish, West African, and Caribbean roots. From the jazz halls of New Orleans to the rural dances of Cajun Country, music is central to the state's culture. 
+Music genres
+Jazz: Born in New Orleans, jazz is a fusion of African, Caribbean, and European sounds. It evolved from earlier forms like ragtime and blues and was shaped by iconic figures like Louis Armstrong, who brought the sound to a worldwide audience.
+Cajun music: The francophone music of the Acadians who settled in southern Louisiana, Cajun music is rooted in French folk melodies with influences from Irish, German, and African traditions. Characterized by the accordion and fiddle, it provides the lively soundtrack for community dances called fais do-dos.
+Zydeco: A younger and more modern genre than Cajun music, zydeco is the music of French-speaking Black Creoles. This energetic dance music incorporates strong elements of blues, rhythm & blues, and soul, prominently featuring the accordion and the frottoir (a metal washboard).</p>
+             <iframe width="100%" height="315" 
+             src="https://youtu.be/6YF5BNelkyk?si=B_lsRnrXOr8ijaZ5"
+             title="New Orleans Jazz"
+             frameborder="0"
+             allowfullscreen</iframe>
+            </section>
+            <section>
+                  <h2>Mardi Gras Fun Fact Generator</h2>
+                <p>Click below to learn a random Louisiana fun fact!</p>
+                <button onclick="showFact()">Show Fun Fact</button>
+                <div class="fun-fact" id="factBox">Press the button to learn something new!</div>
+            </section>
+        </main>
+        <footer>
+            <p>Created by Quentin Crumedy | Teach me something Project | 2025</p>
+        </footer>
+        <script>
+            var facts=[
+                "Mardi gras had been celebrated in Lousiana since the 1700s.",
+                "Louisiana is the only U.S stae that uses parishes instead of counties.",
+                "Jazz music was born in New Orleans around 1910.",
+                "Cajun culture originated from French-speaking Acadians who settled in Lousiana.",
+                "The official state crustacean is the crawfish!",
+                "Baton Roue means 'Red Stick' in French."
+            ];
+            function showFact(){
+                var randomFact=facts[Math.floor(math.random()* facts.length)];
+                document.getElementById("factbox").textContent = randomFact;
+            }
+        </script>
+    </body>
+    </html>
